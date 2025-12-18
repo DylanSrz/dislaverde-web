@@ -1,0 +1,293 @@
+/* ======================================
+   DISLAVERDE SAS - DISEÑO VISUAL
+   Estilo moderno | Modo claro
+   Colores: Verde, Amarillo, Blanco
+   ====================================== */
+
+:root {
+    --verde: #2e7d32;
+    --verde-claro: #e8f5e9;
+    --amarillo: #fbc02d;
+    --gris: #555;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--gris);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: var(--verde);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.logo span {
+    color: var(--amarillo);
+}
+
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(to right, #2e7d32, #43a047);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn.primary {
+    background-color: var(--amarillo);
+    color: #333;
+}
+
+.btn.secondary {
+    background-color: white;
+    color: var(--verde);
+}
+
+/* SECCIONES */
+section {
+    padding: 80px 60px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: var(--verde);
+    margin-bottom: 30px;
+}
+
+/* SERVICIOS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: var(--verde-claro);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--verde);
+    margin-bottom: 15px;
+}
+
+/* CATÁLOGO */
+.catalogo-texto {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.catalogo-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid var(--verde-claro);
+    font-weight: 600;
+}
+
+/* AGENDA */
+.agenda {
+    background: var(--verde-claro);
+    text-align: center;
+}
+
+.agenda-form {
+    max-width: 400px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.agenda-form input,
+.agenda-form select {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* CONTACTO */
+.contacto-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--verde);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    section {
+        padding: 60px 30px;
+    }
+}
+
+.producto-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.producto-card h3 {
+    color: var(--verde);
+    margin-bottom: 10px;
+}
+
+
+.producto-card p {
+    margin-bottom: 20px;
+}
+
+/* ANIMACIONES Y EFECTOS */
+
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.card,
+.producto-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover,
+.producto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav a {
+    position: relative;
+}
+
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--amarillo);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+section,
+.card,
+.producto-card {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
